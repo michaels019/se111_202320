@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michael Sheehan" >
+    <meta name="description" content="Week 6 Demo" >
+    <title>W6 | Intro to JS</title>
+</head>
+<body>
+    <!--the file should have some sort of HTML to start-->
+    <h1>W6 Demo | Intro to JavaScript</h1>
+
+    <!--script tags go after the indented HTML-->
+    <!--for JS you use <script></script> just like with CSS, where it is <style></style-->
+    <!--inside of script there it is a different language. you are now writing in JS-->
+<script>
+
+    //everything here must be written in JS
+
+    var num1 = 10
+    var num2 = 7
+
+    var sum = num1 + num2
+
+
+    console.log(sum) //display a var
+    //this is not displayed to the user, only in the console section of the devloper tools
+    console.log("Hello World!") //display a string
+
+    console.log("Hello World! the sum ios: " + sum + "cool right?") // display a string and a var
+    
+    console.log(`Hello World! This sum is: ${sum}. Cool right`)
+     //notice how single things were used here (under esc key w tilds)
+
+    //things like /n and /t still work with this method
+
+    console.log(`Hello World! This sum is: ${sum}. \n\nCool right`)
+
+
+    //alert() creates a popup
+    alert(`the sum is: ${sum}!`)
+    console.log("HI")
+    alert(sum)
+    console.log("HELLO")
+    alert(`the sum is: $${sum.toFixed(2)}`) //displaying rounded decimal
+    console.log("HOWDY")
+
+    console.log(sume) //ex of an error in cconsole
+
+    //prompt() creates a pop-up with data display and also a text field input -
+    //allows the user to enter data to be used later in the <script>
+    //prompt() --> input() in Python for input
+
+    prompt(`enter your name: `)
+
+    //to enter values into a prompt you must assign to a var
+
+    var nameF = prompt(`Enter your first name: `)
+    var nameL = prompt(`Thanks ${nameF}! Please enter your last name: `)
+    console.log(nameL)
+
+    //if browser treats prompt() return as a string, cast Number() to use in math
+    var num = Number(prompt(`Enter a number: `))
+    //just like pythin, num = int(input("Enter a number: "))
+
+    var square = num * num
+
+    console.log(square.toFixed(2))
+</script>
+    
+</body>
+</html>
