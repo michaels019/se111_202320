@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 7">
+    <meta name="author" content="Michael Sheehan">
+
+
+    <title>JS Calculator</title>
+</head>
+
+<body>
+
+    <script>
+
+        //user input
+        var hrPay = Number(prompt(`Enter your hourly pay: `))
+        var hrsWorked = Number(prompt(`Enter the ammount of hours worked: `))
+
+        //tax
+        var taxPct = .2
+
+        //calculating gross pay
+        var grossPay = hrPay * hrsWorked
+        let gp = grossPay.toFixed(2)
+        console.log(grossPay)
+
+        //calculating tax
+        var tax = grossPay * taxPct
+        let t = tax.toFixed(2)
+        console.log(tax)
+
+        //calculating net pay
+        var netPay = grossPay - tax
+        let np = netPay.toFixed(2)
+        console.log(netPay)
+
+        //final output
+        alert(`Your Gross Pay is ${gp}\n Uncle Sams Share is ${t}\n Net pay is ${np}\n Thank you for using my calculator!`)
+        
+
+
+    </script>
+
+
+</body>
+
+</html>
