@@ -51,13 +51,14 @@
 
             <h3>Employee Info: </h3>
             <table>
+                <td>
             <p id="info" style="font-family:Courier New, monospace;"><i>Information will be loaded once above form is filled.</i></p>
             <!---NOTES FOR TESTING:
                     *below is where the form values (and new values processed by the js) will be displayed-->
         
 
             <p id="check" style="font-family:Courier New, monospace; width:220px; text-align:right;"></p>
-
+                </td>
             </table>
         </div>
 
@@ -140,7 +141,7 @@
             console.log(net)
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = `Full Name:${full}  <br>  Hours: ${hours}  <br>  Rate: $${rate}`
+            var finalMessage = `<tr> Full Name:${full}</tr>  <br>  Hours: ${hours}  <br>  Rate: $${rate}`
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
