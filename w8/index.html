@@ -39,6 +39,7 @@
 		
 		var first = document.querySelector(`#first`)
 		var last = document.querySelector(`#last`)
+		var button = document.querySelector(`#button`)
 
 		//Make an array to store the people
 		
@@ -82,6 +83,8 @@
 
 			//Add the person object into the people array by using the .push() array method.
 			
+			var people = []
+
 			people.push(person)
 
 			//Bubble sort people on the last name
@@ -107,32 +110,34 @@
 			var output = ""
 
 			//Loop through the objects in the people array
-			for(let i = 0; j < people.length -1; j++ )
+			for(let i = 0; i < people.length; i++)
             {
 
 				//Loop through each property in the object
 				for(key in people[i])
                 {
-
-					output += `<p> <b>${key.toUpperCase()}</b>: ${people[i][key]} </p>`
-
 					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-				
+
+					output += `<p><b>${key.toUpperCase()}</b>: ${people[i][key]}</p>`
 
                 }
+				
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
 				
 				output += `<hr>`
 
 			}//end of loop going through people array to edit 'output'
 
-				//log the output string
-				//replace the outputDiv's inner HTML with the output string
-				
+			//log the output string
 
+			console.log(output)
+
+			//replace the outputDiv's inner HTML with the output string
+
+			document.querySelector(`#output`).innerHTML = output
 
 
 		}
