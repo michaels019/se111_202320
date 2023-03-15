@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Week 2 Files</title>
+<title>Week 9</title>
 <style type="text/css">
 	.border{border:1px solid black;}
 </style>
 </head>
 
-<body>
+<body id = "body">
 </body>
 
 <script type="text/javascript">
@@ -26,7 +26,38 @@
 	]
 
 	console.log(people)
-	
+	console.dir(people)
+
+	var body = document.querySelector(`body`)
+    
+	console.log(body)
+    console.dir(body)
+
+
+    for(let i = 0; i < people.length; i++) 
+     {
+        var tempDiv = document.createElement(`div`)
+                
+
+        tempDiv.setAttribute(`id`, `${i}`)
+        tempDiv.setAttribute(`class`, `border`)
+
+
+        for(key in people[i])
+        {
+               var p = document.createElement(`p`)
+               var text = document.createTextNode(people[i][key])
+
+               p.appendChild(text)
+               tempDiv.appendChild(p)
+
+        }
+
+        body.appendChild(tempDiv)
+
+
+            }
+
 </script>
 
 </html>
